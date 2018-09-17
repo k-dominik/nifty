@@ -54,8 +54,9 @@ requirements:
     - python {{PY_VER}}*
     - hdf5 >=1.8.17
     - numpy {{NPY_VER}}*
-    - xtensor
-    - xtensor-python
+    - vigra 1.11*
+    - xtensor 0.15.1
+    - xtensor-python 0.17*
     {% if WITH_CPLEX is defined and WITH_CPLEX %}
     - cplex-shared # Need to make sure that cplex dylibs exist
     {% endif %}
@@ -73,6 +74,7 @@ requirements:
     - fastfilters
     - scikit-image
     - scipy
+    - vigra 1.11*
     - futures # [py2k]
 
     {% if WITH_CPLEX is defined and WITH_CPLEX %}
