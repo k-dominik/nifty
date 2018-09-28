@@ -40,8 +40,9 @@ install:
   - conda install -c conda-forge cmake=3.2 conda-build
 
 before_script:
-  - eval "${MATRIX_EVAL}"
-  - bash -c 'echo "${CC} and ${CXX}"'
+  - eval ${MATRIX_EVAL}
+  - $CXX --version
+  - cmake --version
 
 script:
 
@@ -50,6 +51,7 @@ script:
   ###############################################
   - export PATH="$HOME/miniconda/bin:$PATH"
   - source activate root
-  - conda build -c conda-forge --python=3.6 --numpy=1.12 conda-recipe
+  # need -c ilastik-forge for fastfilters
+  - conda build -c conda-forge -c ilastik-forge --python=3.6 --numpy=1.12 conda-recipe
 
 
