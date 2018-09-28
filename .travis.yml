@@ -50,6 +50,6 @@ script:
   ###############################################
   - export PATH="$HOME/miniconda/bin:$PATH"
   - source activate root
-  - conda build conda-recipe
+  - conda build -c conda-forge --python=3.6 --numpy=1.12 conda-recipe
 
 
