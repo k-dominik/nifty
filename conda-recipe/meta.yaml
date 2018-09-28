@@ -97,6 +97,20 @@ test:
     imports:
       - nifty
   {% endif %}
+  requires:
+    - nose
+
+  files:
+    - src/python/test/*/*.py
+
+  commands:
+  - nosetests --where=src/python/test/cgp
+  - nosetests --where=src/python/test/graph/lifted_multicut
+  - nosetests --where=src/python/test/graph/multicut
+  - nosetests --where=src/python/test/graph/mincut
+  - nosetests --where=src/python/test/graph/agglo
+  - nosetests --where=src/python/test/hdf5
+  - nosetests --where=src/python/test/tools
 
 about:
   home: https://github.com/DerThorsten/nifty
