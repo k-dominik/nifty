@@ -50,6 +50,7 @@ script:
   # shortcuts
   ###############################################
   - $CXX --version
+  - $CC --version
   - export PATH="$HOME/miniconda/bin:$PATH"
   - source activate root
   # need -c ilastik-forge for fastfilters
