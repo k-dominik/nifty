@@ -41,6 +41,9 @@ install:
   - conda install -c anaconda cmake=3.2
   - conda install -c conda-forge glpk
 
+before_script:
+  - eval "${MATRIX_EVAL}"
+
 script:
 
   ###############################################
