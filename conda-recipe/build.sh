@@ -20,8 +20,6 @@ if [ $(uname) == "Darwin" ]; then
     export CXX=clang++
     export DYLIB="dylib"
 else
-    export CC=gcc
-    export CXX=g++
     export DYLIB="so"
     # Check which gcxx abi to use; for compatibility with libs build with gcc < 5:
     if [[ ${DO_NOT_BUILD_WITH_CXX11_ABI} == '1' ]]; then
