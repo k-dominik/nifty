@@ -43,6 +43,7 @@ install:
 
 before_script:
   - eval "${MATRIX_EVAL}"
+  - bash -c 'echo "${CC} and ${CXX}"'
 
 script:
 
@@ -63,6 +64,8 @@ script:
   # configure cmake
   ###############################################
   - $ENV_BIN/cmake 
+          -DCMAKE_C_COMPILER="${CC}"
+          -DCMAKE_CXX_COMPILER="${CXX}"
           -DWITHIN_TRAVIS=ON 
           -DWITH_QPBO=ON
           -DWITH_HDF5=OFF
