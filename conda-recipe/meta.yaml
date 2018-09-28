@@ -4,7 +4,6 @@
   {% set WITH_CPLEX = 0 %}
 {% endif %}
 {% set WITH_CPLEX = WITH_CPLEX|int %}
-
 {% if not WITH_GUROBI is defined %}
   {% set WITH_GUROBI = 0 %}
 {% endif %}
@@ -88,14 +87,14 @@ requirements:
 
 test:
   {% if WITH_CPLEX %}
-    imports:
-      - nifty_with_cplex
+  imports:
+    - nifty_with_cplex
   {% elif WITH_GUROBI %}
-    imports:
-      - nifty_with_gurobi
+  imports:
+    - nifty_with_gurobi
   {% else %}
-    imports:
-      - nifty
+  imports:
+    - nifty
   {% endif %}
   requires:
     - nose
