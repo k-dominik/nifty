@@ -1,0 +1,32 @@
+_compiler:
+  - toolchain_c                # [linux or osx]
+  # new compilers
+  - gcc                        # [linux]
+  - clang                      # [osx]
+  - vs2015                     # [win]
+
+cxx_compiler:
+  - toolchain_cxx              # [linux or osx]
+  # new compilers
+  - gxx                        # [linux]
+  - clangxx                    # [osx]
+  - vs2015                     # [win]
+
+
+boost:
+  - 1.63.0
+hdf5:
+  - 1.8.17
+numpy:
+  - 1.12
+python:
+  - 3.6
+vigra:
+  - 1.11
+
+pin_run_as_build:
+  boost: x.x
+  hdf5: x.x
+  numpy: x.x
+  python: x.x
+  vigra: x.x

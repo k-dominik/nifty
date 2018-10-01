@@ -5,7 +5,7 @@ project(NIFTY)
 set(${PROJECT_NAME}_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 
-
+MESSAGE (STATUS "${CXX}" )
 
 #-------------------------------------------------------------------------------------------------------------------
 # Version
