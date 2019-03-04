@@ -1,13 +1,14 @@
 
 package:
     name: nifty
-    version: v1.0.5
+    version: v1.0.7
 
 source:
   path: ..
 
 build:
-  number: 1
+
+  number: 1001
 
 requirements:
   build:
